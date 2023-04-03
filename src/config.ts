@@ -34,6 +34,7 @@ const config = {
     // path to a digital twin in spinalhub filesystem
     path: process.env.SPINAL_DTWIN_PATH,
   },
+  verifMonth: parseInt(process.env.VERIFMONTH)
 };
 export default config;
 

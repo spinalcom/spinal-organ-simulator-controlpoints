@@ -30,7 +30,7 @@ const protocol = process.env.SPINALHUB_PROTOCOL
 const host = process.env.SPINALHUB_IP
 const port = process.env.SPINALHUB_PORT
 
-export function convertFileToJson(file) {
+export function convertFileToJson(file): Promise<any> {
   return new Promise((resolve, reject) => {
     file.load((argPath) => {
       const p = `${__dirname}/${argPath._server_id}.xlsx`;
@@ -43,7 +43,6 @@ export function convertFileToJson(file) {
         })
         f.on('finish', async () => {
           const dataJson = await SpinalExcelManager.convertExcelToJson(p);
-          // console.log(dataJson);
           fs.unlinkSync(p);
           resolve(dataJson);
         })

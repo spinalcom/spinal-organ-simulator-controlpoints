@@ -46,8 +46,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * with this file. If not, see
  * <http://resources.spinalcom.com/licenses.pdf>.
  */
-var spinal_model_timeseries_1 = require("spinal-model-timeseries");
-var instance = null;
+const spinal_model_timeseries_1 = require("spinal-model-timeseries");
+let instance = null;
 function getInstance() {
     if (instance === null) {
         instance = new spinal_model_timeseries_1.SpinalServiceTimeseries();

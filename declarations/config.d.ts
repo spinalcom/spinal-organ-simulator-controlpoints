@@ -9,5 +9,6 @@ declare const config: {
     file: {
         path: string;
     };
+    verifMonth: number;
 };
 export default config;

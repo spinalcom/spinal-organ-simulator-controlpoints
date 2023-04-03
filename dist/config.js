@@ -23,7 +23,7 @@
  * <http://resources.spinalcom.com/licenses.pdf>.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var config = {
+const config = {
     spinalConnector: {
         protocol: process.env.SPINALHUB_PROTOCOL,
         user: process.env.SPINAL_USER_ID || 168,
@@ -35,6 +35,7 @@ var config = {
         // path to a digital twin in spinalhub filesystem
         path: process.env.SPINAL_DTWIN_PATH,
     },
+    verifMonth: parseInt(process.env.VERIFMONTH)
 };
 exports.default = config;
 //# sourceMappingURL=config.js.map

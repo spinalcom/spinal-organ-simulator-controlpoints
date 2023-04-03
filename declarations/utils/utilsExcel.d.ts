@@ -1,1 +1,1 @@
-export declare function convertFileToJson(file: any): Promise<unknown>;
+export declare function convertFileToJson(file: any): Promise<any>;
