@@ -20,7 +20,10 @@
   },
   "homepage": "https://github.com/spinalcom/spinal-organ-simulator-controlpoints#readme",
   "dependencies": {
+    "cron": "^2.3.0",
     "dotenv": "^16.0.3",
+    "install": "^0.13.0",
+    "npm": "^9.6.3",
     "spinal-core-connectorjs": "git+https://github.com/spinalcom/spinal-core-connectorjs.git",
     "spinal-env-viewer-graph-service": "git+https://github.com/spinalcom/Spinal-Graph-Service.git",
     "spinal-env-viewer-plugin-excel-manager-service": "git+https://github.com/spinalcom/spinal-env-viewer-plugin-excel-manager-service.git",

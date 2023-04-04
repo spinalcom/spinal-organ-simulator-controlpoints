@@ -25,6 +25,8 @@ import ConfigFile from "spinal-lib-organ-monitoring";
 import SpinalAPIMiddleware from "./spinalMiddelware";
 import mapControlPoints from "./mapControlPoints";
 import { SpinalGraph } from "spinal-env-viewer-graph-service";
+const CronJob = require('cron').CronJob;
+
 
 async function initSpinalHub() {
   const spinalAPIMiddleware = SpinalAPIMiddleware.getInstance();
@@ -38,5 +40,9 @@ async function init() {
   await mapControlPoints(graph);
   ConfigFile.init(spinalAPIMiddleware.conn, process.env.ORGAN_NAME + "-config", process.env.SPINALHUB_IP, process.env.SPINALHUB_PROTOCOL, parseInt(process.env.REQUESTS_PORT));
 }
-
 init();
+
+const job = new CronJob('0 3 * * *', function () {
+  init();
+}, null, true, 'Europe/Paris');
+
